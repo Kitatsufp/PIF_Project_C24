@@ -1,1 +1,57 @@
+#include <stdio.h>
 
+int main()
+{
+    int n;
+    int arr[100];
+    float average, total;
+    printf("Nhap so phan tu n = ");
+    scanf("%d", &n);
+   
+    while(n <= 5)
+    {
+        printf("Nhap so phan tu n = ");
+        scanf("%d", &n);
+    }
+   
+    printf("Khoi tao mang int arr[%d]\n", n);
+    printf("Nhap gia tri tung phan tu:\n");
+    
+    for (int i = 0; i <= n - 1; i++)
+    {
+        printf("arr[%d] = ", i);
+        scanf("%d", &arr[i]);
+    }
+    
+    for (int i = 0; i <= n - 1; i++)
+    {
+        if(n - 1 != 0)
+        {
+            if(i == 0)
+            {
+                printf("arr[] = { %d", arr[i]);
+            }
+            else if((i != 0) && (i != n - 1))
+            {
+                printf(" %d", arr[i]);
+            }
+            else if(i == n - 1)
+            {
+                printf(" %d }\n", arr[i]);
+            }
+        } 
+        else if(n - 1 == 0)
+        {
+            printf("arr[] = { %d }\n", arr[i]);
+        }
+    }
+    
+    for (int i = 0; i < n; i++)
+    {
+        total += arr[i];
+    }
+    
+    average = total / n;
+    printf("Gia tri trung binh la: %.3f", average);
+    return 0;
+}
