@@ -1,0 +1,32 @@
+Địa chỉ được in ra có dung lượng 4 byte.
+Dung lượng của uint8_t là 1 byte
+Dung lượng của uint16_t là 2 byte
+Dung lượng của uint32_t là 4 byte
+
+Nhận xét:
+Điều này là đúng vì ở các con số 8, 16, 32 là các bit mà 8 bit ứng với 1 byte.
+
+#include <stdio.h>
+#include <stdint.h>
+
+int main() {
+    printf("%zu", sizeof(uint32_t));
+    return 0;
+}
+
+#include <stdio.h>
+#include <stdint.h>
+
+int main() {
+    printf("%zu", sizeof(uint8_t));
+    return 0;
+}
+
+#include <stdio.h>
+#include <stdint.h>
+
+int main() {
+    printf("%zu", sizeof(uint16_t));
+    return 0;
+}
+
