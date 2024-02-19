@@ -1,1 +1,67 @@
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    int arr[100];
+    int min, max;
+    printf("Nhap so phan tu n = ");
+    scanf("%d", &n);
+   
+    while(n <= 5)
+    {
+        printf("Nhap so phan tu n = ");
+        scanf("%d", &n);
+    }
+   
+    printf("Khoi tao mang int arr[%d]\n", n);
+    printf("Nhap gia tri tung phan tu:\n");
+    
+    for (int i = 0; i <= n - 1; i++)
+    {
+        printf("arr[%d] = ", i);
+        scanf("%d", &arr[i]);
+    }
+    
+    for (int i = 0; i <= n - 1; i++)
+    {
+        if(n - 1 != 0)
+        {
+            if(i == 0)
+            {
+                printf("arr[] = { %d", arr[i]);
+            }
+            else if((i != 0) && (i != n - 1))
+            {
+                printf(" %d", arr[i]);
+            }
+            else if(i == n - 1)
+            {
+                printf(" %d }\n", arr[i]);
+            }
+        } 
+        else if(n - 1 == 0)
+        {
+            printf("arr[] = { %d }\n", arr[i]);
+        }
+    }
+    
+    min = max = arr[0];
+    
+    for (int i = 0; i < n - 1; i++)
+    {
+        if (min >= arr[i])
+        {
+            min = arr[i];
+        }
+        if (max <= arr[i])
+        {
+            max = arr[i];
+        }
+    }
+    
+    printf("min = %d\n", min);
+    printf("max = %d", max);
+    return 0;
+}
 
