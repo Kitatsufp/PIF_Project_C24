@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <stdint.h>
+
+struct infor
+{
+    char name[32];
+    int mssv[8];
+    uint8_t course_c;
+};
+
+void infor_input(struct infor* stu_infor)
+{
+    printf("Nhap ten hoc sinh: ");
+    scanf("%s", stu_infor->name);
+    printf("%s\n", stu_infor->name);
+    
+    printf("Nhap ma so sinh vien: \n");
+    
+    for (int i = 0; i < 8; i++)
+    {
+        scanf("%d", &stu_infor->mssv[i]);
+    }
+    
+    for (int i = 0; i < 8; i++)
+    {
+        printf("%d", stu_infor->mssv[i]);
+    }
+    
+    printf("\n");
+    printf("Nhap so thu tu C da tham gia: ");
+    scanf("%d", &stu_infor->course_c);
+    printf("%d", stu_infor->course_c);
+}
+
+int main()
+{
+    struct  infor s1;
+    infor_input(&s1);
+    return 0;
+}
+
