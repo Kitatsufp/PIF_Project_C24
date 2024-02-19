@@ -4,11 +4,10 @@ int main()
 {
     int n;
     int arr[100];
-    int min, max;
     printf("Nhap so phan tu n = ");
     scanf("%d", &n);
    
-    while(n <= 5)
+    while((n < 0) || (n > 16))
     {
         printf("Nhap so phan tu n = ");
         scanf("%d", &n);
@@ -46,22 +45,12 @@ int main()
         }
     }
     
-    min = max = arr[0];
+    printf("Dia chi cua tung phan tu:\n");
     
-    for (int i = 0; i < n - 1; i++)
+    for (int i = 0; i <= n - 1; i++)
     {
-        if (min >= arr[i])
-        {
-            min = arr[i];
-        }
-        if (max <= arr[i])
-        {
-            max = arr[i];
-        }
+        printf("arr[%d] = %d\n", i, &arr[i]);
     }
     
-    printf("min = %d\n", min);
-    printf("max = %d", max);
     return 0;
 }
-
